@@ -89,8 +89,8 @@
 			label = "Base";
 			bindings = <
 			&kp Q &kp W &kp E &kp R &kp T           &kp Y &kp U  &kp I     &kp O   &kp P 
-			&kp A &kp S &kp D &kp F &kp G           &kp H &kp J  &kp K     &kp L &kp IT_OGRV
-			&kp Z &kp X &kp C &kp V &kp B           &kp N &kp M  &kp COMMA &kp DOT &kp IT_UGRV
+			&kp A &kp S &kp D &kp F &kp G           &kp H &kp J  &kp K     &kp L &kp SEMICOLON
+			&kp Z &kp X &kp C &kp V &kp B           &kp N &kp M  &kp COMMA &kp DOT &kp SLASH
 							&mo EXT &qt LSHIFT SPACE           &kp SPACE &sl SYM
 			>;
 		};
@@ -100,9 +100,9 @@
 			label = "Sym.";
 			bindings = <
 			&kp N1 &kp N2 &kp N3 &kp N4 &kp N5		                                    &kp N6 &kp N7 &kp N8 &kp N9 &kp N0
-			&kp IT_LESS &kp IT_USD &kp IT_LPAR &kp IT_LBRC &kp IT_LBKT  &kp IT_EQL &kp IT_QUES &kp IT_SQUOT &kp IT_MINUS &kp IT_AST
-			&kp IT_GREAT &kp IT_PERC &kp IT_RPAR &kp IT_RBRC &kp IT_RBKT 	&kp IT_AT &kp IT_EXCL &kp IT_DQUOT &kp IT_PLUS &kp IT_FSLH
-														&mo FNC  &mo SYM2       &trans &trans
+			&kp LESS_THAN &kp PERCENT &kp LPAR &kp LBRC &kp LBKT  &kp EQUAL &kp QMARK &kp APOSTROPHE &kp PLUS &kp ASTERISK
+			&kp GREATER_THAN &kp DOLLAR &kp RPAR &kp RBRC &kp RBKT 	&kp AT &kp EXCL &kp SQT &kp MINUS &kp SLASH
+							&mo FNC  &mo SYM2       &trans &trans
 			>;
 		};
 
@@ -113,7 +113,7 @@
 			&kp ESC  &kp C_PREV &kp C_PP  &kp C_NEXT  &kp C_PAUSE    	&kp PG_UP  &kp HOME &kp UP &kp END &kp CAPS
 			&sk LALT &sk LGUI  &sk LSHIFT  &sk LCTRL  &kp RALT 			&kp PG_DN &kp LEFT  &kp DOWN  &kp RIGHT   &kp DEL
 			&kp LC(Z)  &kp LC(X) &kp LC(C) &kp TAB   &kp LC(V)          &kp LC(BSPC) &kp BSPC &trans &trans  &trans
-																		&trans &kp LCTRL    &kp ENTER  &mo FNC 
+							&trans &kp LCTRL    		&kp ENTER  &mo FNC 
 			>;
 		};
 
@@ -123,8 +123,8 @@
 			bindings = <
 			&kp F1 &kp F2 &kp F3 &kp F4 &kp F5                  &kp F6 &kp F7 &kp F8 &kp F9 &kp F10 
 			&sk LALT &sk LGUI &sk LSHIFT &sk LCTRL &kp RALT     &kp F11 &kp F12  &kp PRINTSCREEN &trans &trans
-			&none &none &none &none &none				          &none &none &none &none &none 
-							  &none &none              &none &none  
+			&none &none &none &none &none			    &none &none &none &none &none 
+							  &none &none       &none &none  
 			>;
 		};
 
@@ -132,10 +132,10 @@
 		symbols_2_layer {
 			label = "Sym.2";
 			bindings = <
-			&kp IT_CARET &kp IT_UNDER &kp IT_PND &kp IT_EUR &kp IT_HASH         &none &none &none &none &none 
-			&kp IT_BKTK &kp IT_TILDE &kp IT_BSLH &kp IT_PIPE &kp IT_AND         &none &none &none &none &none
-			&none 			&none 			 &kp IT_SECT &kp IT_CCED &kp IT_DEG				  &none &none &none &none &none
-																	&none &none        	&none &none 
+			&kp CARET &kp UNDER &kp POUND &none &none         &none &none &none &none &none 
+			&kp GRAVE &kp TILDE &kp BSLH &kp PIPE &kp AMPS    &none &none &none &none &none
+			&none &none &none &none &none			  &none &none &none &none &none
+						&none &none        	  &none &none 
 			>;
 		};
 
@@ -143,10 +143,10 @@
 		accent_layer {
 			label = "Accent";
 			bindings = <
-			&none &none &none &kp IT_CEGR &none                         &none &none &none &none &none 
-			&kp IT_AGRV &kp IT_IGRV &kp IT_OGRV &kp IT_EGRV &kp IT_EACU &none &none &none &none &none
-			&none &none &none &kp IT_UGRV &none                         &none &none &none &none &none
-									&none &none                         &none &none 
+			&none &none &none &none &none                         &none &none &none &none &none 
+			&none &none &none &none &none 			      &none &none &none &none &none
+			&none &none &none &none &none                         &none &none &none &none &none
+					  &none &none                         &none &none 
 			>;
 		};
 
@@ -155,9 +155,9 @@
 				label = "Sett.";
 				bindings = <
 				&bootloader &none &none &bt BT_CLR &bt BT_SEL 0               &bt BT_SEL 3 &none &unstick &none &bootloader 
-				&none &none &none &none      &bt BT_SEL 1 						  &bt BT_SEL 4 &none &none &none &none
-				&none &none &none &none      &bt BT_SEL 2               &bt BT_SEL 5 &none &none &none &none
-										&none &none                         &none &none 
+				&none &none &none &none      &bt BT_SEL 1 			&bt BT_SEL 4 &none &none &none &none
+				&none &none &none &none      &bt BT_SEL 2               	&bt BT_SEL 5 &none &none &none &none
+								&none &none                         &none &none 
 				>;
 		};
 	};
