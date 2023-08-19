@@ -1,4 +1,4 @@
-## Welcome to smallwave's ZMK config
+## Welcome to the smallwave ZMK config
 
 **Are you trying to understand how I did what I did?**
 
