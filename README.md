@@ -27,7 +27,7 @@
 
 [Ben Vallack](https://github.com/benvallack)
 
-[Duccio (Duckyb/Kyek)](https://github.com/duckyb)
+[Duccio (Duckyb / Kyek)](https://github.com/duckyb)
 
 [Joe Scotto](https://github.com/joe-scotto)
 
