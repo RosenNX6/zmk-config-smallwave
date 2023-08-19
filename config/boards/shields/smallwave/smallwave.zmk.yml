@@ -1,0 +1,11 @@
+file_format: "1"
+id: smallwave
+name: smallwave
+type: shield
+url: https://github.com/RosenNX6/smallwave
+requires: [pro_micro]
+features:
+  - keys
+siblings:
+  - smallwave_sun
+  - smallwave_moon
