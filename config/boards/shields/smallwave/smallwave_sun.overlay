@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: MIT
  */
 
-#include "urchin.dtsi"
+#include "smallwave.dtsi"
 
 &kscan0 {
     diode-direction = "col2row";
