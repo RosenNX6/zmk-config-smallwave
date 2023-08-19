@@ -14,6 +14,8 @@
 ---
 include:
   - board: nice_nano_v2
-    shield: smallwave_sun
+    shield: smallwave_sun nice_view_adapter  nice_view
   - board: nice_nano_v2
-    shield: smallwave_moon
+    shield: smallwave_moon nice_view_adapter nice_view
+  - board: nice_nano_v2
+    shield: settings_reset
