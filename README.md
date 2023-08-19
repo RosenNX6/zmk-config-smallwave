@@ -1,4 +1,4 @@
-## Welcome to the smallwave ZMK config
+## Welcome to the smallwave ZMK config ##
 
 **Are you trying to understand how I did what I did?**
 
@@ -6,20 +6,20 @@
 
 **Do you want to download my keymap?**
 
-> **Note**
+> **Warning**
 > My firmware is still under construction...I am very confused.
 
 [Cross your fingers and download the firmware zip from the latest successful action run.](https://github.com/RosenNX6/zmk-config-smallwave/actions)
 
-## Keymap Cheat Sheet
+## Keymap Cheat Sheet ##
 
 <div align="center">
 
-  **Also Under Construction**
+ ![smallwave keymap drawio](https://github.com/RosenNX6/zmk-config-smallwave/assets/124473875/e8c33d0f-4d36-4b42-9719-e0259f7d623d) 
 
 </div>
 
-*This diagram will be created using draw.io*
+*This diagram was created using draw.io*
 
 ## Credits ##
 
