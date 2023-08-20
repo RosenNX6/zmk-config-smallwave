@@ -35,4 +35,4 @@
 
 ["Just google it"](https://www.google.com)
 
-[Your Mom](https://http://www.yourmom.com)
+[Your Mom](http://www.yourmom.com)
