@@ -15,8 +15,9 @@
 #define EXT 2
 #define FNC 3
 #define SYM2 4
-#define ACCENT 5
-#define SETTINGS 6
+#define CAD 5
+#define CAD2 6
+#define SETTINGS 7
 // -----------------
 
 &sk {
@@ -55,10 +56,10 @@
 	combos {
 		compatible = "zmk,combos";
 		// both right thumb keys
-		combo_accent {
+		combo_settings {
 			timeout-ms = <200>;
 			key-positions = <32 33>;
-			bindings = <&mo ACCENT>;
+			bindings = <&mo SETTINGS>;
 		};
 		// internal-left & external-right thumb keys
 		combo_sym2 {
@@ -67,18 +68,10 @@
 			bindings = <&mo SYM2>;
 		};
 		// both left thumb keys
-		combo_settings {
+		combo_cad {
 			timeout-ms = <200>;
 			key-positions = <30 31>;
-			bindings = <&mo SETTINGS>;
-		};
-		// left index & middle fingers (home-row)
-		// hold control & space for Adobe workflow
-		combo_ctrl_space {
-			timeout-ms = <200>;
-			key-positions = <12 13>;
-			bindings = <&kp LC(SPACE)>;
-			layers = <BASE>;
+			bindings = <&to CAD>;
 		};
 	};
 
@@ -91,7 +84,7 @@
 			&kp Q &kp W &kp E &kp R &kp T           &kp Y &kp U  &kp I     &kp O   &kp P 
 			&kp A &kp S &kp D &kp F &kp G           &kp H &kp J  &kp K     &kp L &kp SEMICOLON
 			&kp Z &kp X &kp C &kp V &kp B           &kp N &kp M  &kp COMMA &kp DOT &kp SLASH
-							&mo EXT &qt LSHIFT SPACE           &kp SPACE &sl SYM
+				&sl SYM &qt LSHIFT SPACE           &kp SPACE &mo EXT
 			>;
 		};
 
@@ -99,10 +92,10 @@
 		sym_layer {
 			label = "Sym.";
 			bindings = <
-			&kp N1 &kp N2 &kp N3 &kp N4 &kp N5		                                    &kp N6 &kp N7 &kp N8 &kp N9 &kp N0
-			&kp LESS_THAN &kp PERCENT &kp LPAR &kp LBRC &kp LBKT  &kp EQUAL &kp QMARK &kp APOSTROPHE &kp PLUS &kp ASTERISK
-			&kp GREATER_THAN &kp DOLLAR &kp RPAR &kp RBRC &kp RBKT 	&kp AT &kp EXCL &kp SQT &kp MINUS &kp SLASH
-							&mo FNC  &mo SYM2       &trans &trans
+			&kp SLASH &kp N7 &kp N8 &kp N9 &kp MINUS	&kp DOLLAR &kp AMPS &kp EXCL &kp EQUAL &kp GREATER_THAN
+			&kp N0 &kp N4 &kp N5 &kp N6 &kp DOT		&kp LPAR &kp RPAR &kp QMARK &kp SQT &kp DQT
+			&kp ASTERISK &kp N1 &kp N2 &kp N3 &kp PLUS 	&kp HASH &kp UNDER &kp AT &kp PERCENT &kp LESS_THAN
+						&trans  &trans       	&mo SYM2 &mo FNC
 			>;
 		};
 
@@ -113,7 +106,7 @@
 			&kp ESC  &kp C_PREV &kp C_PP  &kp C_NEXT  &kp C_PAUSE    	&kp PG_UP  &kp HOME &kp UP &kp END &kp CAPS
 			&sk LALT &sk LGUI  &sk LSHIFT  &sk LCTRL  &kp RALT 			&kp PG_DN &kp LEFT  &kp DOWN  &kp RIGHT   &kp DEL
 			&kp LC(Z)  &kp LC(X) &kp LC(C) &kp TAB   &kp LC(V)          &kp LC(BSPC) &kp BSPC &trans &trans  &trans
-							&trans &kp LCTRL    		&kp ENTER  &mo FNC 
+							&mo FNC &kp LENTER    		&kp LCTRL  &trans 
 			>;
 		};
 
@@ -132,16 +125,27 @@
 		symbols_2_layer {
 			label = "Sym.2";
 			bindings = <
-			&kp CARET &kp UNDER &kp POUND &none &none         &none &none &none &none &none 
-			&kp GRAVE &kp TILDE &kp BSLH &kp PIPE &kp AMPS    &none &none &none &none &none
-			&none &none &none &none &none			  &none &none &none &none &none
-						&none &none        	  &none &none 
+			&kp CARET &kp TILDE &kp GRAVE &kp PIPE &none	&none &none &none &none &none 
+			&kp BSLH &kp LBKT &kp RBKT &kp LBRC &kp RBRC    &none &none &none &none &none
+			&none &none &none &none &none			&none &none &none &none &none
+							&none &none     &none &none 
 			>;
 		};
 
-		// Used to type regional accents.
-		accent_layer {
-			label = "Accent";
+		// Used to type CAD commands.
+		cad_layer {
+			label = "CAD.";
+			bindings = <
+			&kp ESCAPE &none &none &none &none                         &none &none &none &none &none 
+			&none &none &none &none &none 			      &none &none &none &none &none
+			&none &none &none &none &none                         &none &none &none &none &none
+					  &mo CAD2 &to BASE                         &none &none 
+			>;
+		};
+
+		// Low frequency CAD commands.
+		cad_2_layer {
+			label = "CAD.2";
 			bindings = <
 			&none &none &none &none &none                         &none &none &none &none &none 
 			&none &none &none &none &none 			      &none &none &none &none &none
