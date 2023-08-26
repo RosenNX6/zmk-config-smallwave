@@ -15,8 +15,8 @@
 #define EXT 2
 #define FNC 3
 #define SYM2 4
-#define CAD 5
-#define CAD2 6
+#define MACRO 5
+#define MACRO2 6
 #define SETTINGS 7
 // -----------------
 
@@ -51,6 +51,135 @@
 			#binding-cells = <0>;
 			bindings = <&kp LSHIFT &kp RSHIFT &kp LCTRL &kp RCTRL &kp LALT &kp RALT &kp LGUI &kp RGUI>;
 		};
+		// Defining the macros for the Macro and Macro2 layers
+		// Currently using CAD software commands.
+		cad_hatch: cad_hatch {
+			label = "CAD_hatch";
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings
+			= <&macro_tap &kp H &kp A &kp T &kp C &kp H &kp ENTER>;
+		};
+		cad_hatch: cad_hatch {
+			label = "CAD_hatch";
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings
+			= <&macro_tap &kp H &kp A &kp T &kp C &kp H &kp ENTER>;
+		};
+		cad_erase: cad_erase {
+			label = "CAD_erase";
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings
+			= <&macro_tap &kp E &kp ENTER>;
+		};
+		cad_rotate: cad_rotate {
+			label = "CAD_rotate";
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings
+			= <&macro_tap &kp R &kp O &kp ENTER>;
+		};
+		cad_trim: cad_trim {
+			label = "CAD_trim";
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings
+			= <&macro_tap &kp T &kp R &kp ENTER>;
+		};
+		cad_move: cad_move {
+			label = "CAD_move";
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings
+			= <&macro_tap &kp M &kp O &kp ENTER>;
+		};
+		cad_pline: cad_pline {
+			label = "CAD_pline";
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings
+			= <&macro_tap &kp P &kp L &kp ENTER>;
+		};
+		cad_dist: cad_dist {
+			label = "CAD_dist";
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings
+			= <&macro_tap &kp D &kp I &kp S &kp T &kp ENTER>;
+		};
+		cad_fillet: cad_fillet {
+			label = "CAD_fillet";
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings
+			= <&macro_tap &kp F &kp ENTER>;
+		};
+		cad_group: cad_group {
+			label = "CAD_group";
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings
+			= <&macro_tap &kp G &kp ENTER>;
+		};
+		cad_join: cad_join {
+			label = "CAD_join";
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings
+			= <&macro_tap &kp J &kp ENTER>;
+		};
+		cad_explode: cad_explode {
+			label = "CAD_explode";
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings
+			= <&macro_tap &kp X &kp X &kp ENTER>;
+		};
+		cad_copy: cad_copy {
+			label = "CAD_copy";
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings
+			= <&macro_tap &kp C &kp O &kp ENTER>;
+		};
+		cad_circle: cad_circle {
+			label = "CAD_circle";
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings
+			= <&macro_tap &kp C &kp ENTER>;
+		};
+		cad_break: cad_break {
+			label = "CAD_break";
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings
+			= <&macro_tap &kp B &kp R &kp ENTER>;
+		};
+		cad_offset: cad_offset {
+			label = "CAD_offset";
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings
+			= <&macro_tap &kp O &kp ENTER>;
+		};
+		cad_mirror: cad_mirror {
+			label = "CAD_mirror";
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings
+			= <&macro_tap &kp M &kp I &kp R &kp ENTER>;
+		};
+		cad_revc: cad_revc {
+			label = "CAD_revc";
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings
+			= <&macro_tap &kp R &kp E &kp V &kp C &kp ENTER>;
+		};
+	
 	};
 
 	combos {
@@ -68,49 +197,49 @@
 			bindings = <&mo SYM2>;
 		};
 		// both left thumb keys
-		combo_cad {
+		combo_macro {
 			timeout-ms = <200>;
 			key-positions = <30 31>;
-			bindings = <&to CAD>;
+			bindings = <&to MACRO>;
 		};
 	};
 
 	keymap {
 		compatible = "zmk,keymap";
-		// Base alpha layer
+	// Base alpha layer
 		default_layer {
 			label = "Base";
 			bindings = <
 			&kp Q &kp W &kp E &kp R &kp T           &kp Y &kp U  &kp I     &kp O   &kp P 
 			&kp A &kp S &kp D &kp F &kp G           &kp H &kp J  &kp K     &kp L &kp SEMICOLON
 			&kp Z &kp X &kp C &kp V &kp B           &kp N &kp M  &kp COMMA &kp DOT &kp SLASH
-				&sl SYM &qt LSHIFT SPACE           &kp SPACE &mo EXT
+				&sl EXT &qt LSHIFT SPACE           &kp SPACE &mo SYM
 			>;
 		};
 
-		// Numbers and high frequency symbols
+	// Numbers and high frequency symbols
 		sym_layer {
 			label = "Sym.";
 			bindings = <
-			&kp SLASH &kp N7 &kp N8 &kp N9 &kp MINUS	&kp DOLLAR &kp AMPS &kp EXCL &kp EQUAL &kp GREATER_THAN
-			&kp N0 &kp N4 &kp N5 &kp N6 &kp DOT		&kp LPAR &kp RPAR &kp QMARK &kp SQT &kp DQT
-			&kp ASTERISK &kp N1 &kp N2 &kp N3 &kp PLUS 	&kp HASH &kp UNDER &kp AT &kp PERCENT &kp LESS_THAN
-						&trans  &trans       	&mo SYM2 &mo FNC
+			&kp SLASH &kp N7 &kp N8 &kp N9 &kp MINUS	&kp DOLLAR &kp AMPS &kp EXCL &kp EQUAL &kp CARET
+			&kp N0 &kp N4 &kp N5 &kp N6 &kp DOT		&kp LPAR &kp RPAR &kp SQT &kp DQT &kp BSLH
+			&kp ASTERISK &kp N1 &kp N2 &kp N3 &kp PLUS 	&kp HASH &kp UNDER &kp AT &kp PERCENT &kp PIPE
+						&mo FNC  &mo SYM2       &trans &trans
 			>;
 		};
 
-		// Main modifiers and arrow keys
+	// Main modifiers and arrow keys
 		ext_layer {
 			label = "Mods";
 			bindings = <
 			&kp ESC  &kp C_PREV &kp C_PP  &kp C_NEXT  &kp C_PAUSE    	&kp PG_UP  &kp HOME &kp UP &kp END &kp CAPS
 			&sk LALT &sk LGUI  &sk LSHIFT  &sk LCTRL  &kp RALT 			&kp PG_DN &kp LEFT  &kp DOWN  &kp RIGHT   &kp DEL
 			&kp LC(Z)  &kp LC(X) &kp LC(C) &kp TAB   &kp LC(V)          &kp LC(BSPC) &kp BSPC &trans &trans  &trans
-							&mo FNC &kp LENTER    		&kp LCTRL  &trans 
+							&trans &kp LCTRL    		&kp LENTER  &mo FNC 
 			>;
 		};
 
-  // Function keys with modifiers
+  	// Function keys with modifiers
 		fnc_layer {
 			label = "FRow";
 			bindings = <
@@ -121,40 +250,40 @@
 			>;
 		};
 
-		// Low frequency symbols.
+	// Low frequency symbols.
 		symbols_2_layer {
 			label = "Sym.2";
 			bindings = <
-			&kp CARET &kp TILDE &kp GRAVE &kp PIPE &none	&none &none &none &none &none 
-			&kp BSLH &kp LBKT &kp RBKT &kp LBRC &kp RBRC    &none &none &none &none &none
-			&none &none &none &none &none			&none &none &none &none &none
-							&none &none     &none &none 
+			&none &none &GRAVE &none &none				&none &none &none &none &none 
+			&kp TILDE &kp LBKT &kp RBKT &kp LBRC &kp RBRC    	&none &none &none &none &none
+			&none &none &none &none &none				&none &none &none &none &none
+							&none &none     	&none &none 
 			>;
 		};
 
-		// Used to type CAD commands.
-		cad_layer {
-			label = "CAD.";
+	// Macro layer is currently being used to type CAD software commands.
+		macro_layer {
+			label = "Macro.";
 			bindings = <
-			&kp ESCAPE &none &none &none &none                         &none &none &none &none &none 
-			&none &none &none &none &none 			      &none &none &none &none &none
-			&none &none &none &none &none                         &none &none &none &none &none
-					  &mo CAD2 &to BASE                         &none &none 
+			&kp ESCAPE &kp HATCH &kp ERASE &kp ROTATE &kp TRIM	&none &none &none &none &none 
+			&kp MOVE &kp PLINE &kp DIST &kp FILLET &kp GROUP	&none &none &none &none &none
+			&kp JOIN &kp EXPLODE &kp COPY &kp CIRCLE &kp BREAK	&none &none &none &none &none
+					  		&to SYM1 &mo MACRO2     &none &none 
 			>;
 		};
 
-		// Low frequency CAD commands.
-		cad_2_layer {
-			label = "CAD.2";
+	// Low frequency macros are currently CAD commands.
+		macro_2_layer {
+			label = "Macro.2";
 			bindings = <
-			&none &none &none &none &none                         &none &none &none &none &none 
-			&none &none &none &none &none 			      &none &none &none &none &none
-			&none &none &none &none &none                         &none &none &none &none &none
-					  &none &none                         &none &none 
+			&kp OFFSET &kp MIRROR &kp REVC &kp RECT &kp TORI	&none &none &none &none &none 
+			&kp ARRAY &kp SCALE &kp MEASURE &kp FRZ &kp UGROUP	&none &none &none &none &none
+			&kp SAVE &kp MATCH &kp COPYB &kp PASTE &kp PTBREAK	&none &none &none &none &none
+					 	 		&none &none     &none &none 
 			>;
 		};
 
-// Used to change the keyboard's settings.
+	// Used to change the keyboard's settings.
 		settings_layer {
 				label = "Sett.";
 				bindings = <
