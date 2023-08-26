@@ -58,14 +58,7 @@
 			compatible = "zmk,behavior-macro";
 			#binding-cells = <0>;
 			bindings
-			= <&macro_tap &kp H &kp A &kp T &kp C &kp H &kp ENTER>;
-		};
-		cad_hatch: cad_hatch {
-			label = "CAD_hatch";
-			compatible = "zmk,behavior-macro";
-			#binding-cells = <0>;
-			bindings
-			= <&macro_tap &kp H &kp A &kp T &kp C &kp H &kp ENTER>;
+			= <&macro_tap &kp H &kp A &kp ENTER>;
 		};
 		cad_erase: cad_erase {
 			label = "CAD_erase";
@@ -284,7 +277,7 @@
 		combo_macro {
 			timeout-ms = <200>;
 			key-positions = <30 31>;
-			bindings = <&to MACRO>;
+			bindings = <&tog MACRO>;
 		};
 	};
 
