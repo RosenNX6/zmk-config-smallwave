@@ -209,7 +209,7 @@
 		};
 		cad_frz: cad_frz {
 			label = "CAD_frz";
-			compatible = "zmk,behavior-frz";
+			compatible = "zmk,behavior-macro";
 			#binding-cells = <0>;
 			bindings
 			= <&macro_tap &kp F &kp R &kp Z &kp ENTER>;
