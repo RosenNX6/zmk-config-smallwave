@@ -1,8 +1,8 @@
 manifest:
   remotes:
-      # custom zmk
+      # zmk official
     - name: zmkfirmware
-      url-base: https://github.com/RosenNX6
+      url-base: https://github.com/zmkfirmware
   projects:
     - name: zmk
       remote: zmkfirmware
