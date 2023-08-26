@@ -354,7 +354,7 @@
 			label = "Macro.2";
 			bindings = <
 			&cad_offset &cad_mirror &cad_revc &cad_rect &cad_tori		&none &none &none &none &none 
-			&ca_array &cad_scale &cad_measure &cad_frz &cad_ugroup		&none &none &none &none &none
+			&cad_array &cad_scale &cad_measure &cad_frz &cad_ugroup		&none &none &none &none &none
 			&cad_save &cad_match &cad_copyb &cad_paste &cad_ptbreak		&none &none &none &none &none
 					 	 		&none &none     	&none &none 
 			>;
