@@ -345,7 +345,7 @@
 			&kp ESCAPE &cad_hatch &cad_erase &cad_rotate &cad_trim		&none &none &none &none &none 
 			&cad_move &cad_pline &cad_dist &cad_fillet &cad_group		&none &none &none &none &none
 			&cad_join &cad_explode &cad_copy &cad_circle &cad_break		&none &none &none &none &none
-					  		&to SYM1 &mo MACRO2     	&none &none 
+					  		&to SYM &mo MACRO2     		&none &none 
 			>;
 		};
 
