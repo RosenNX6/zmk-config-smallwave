@@ -331,7 +331,7 @@
 		symbols_2_layer {
 			label = "Sym.2";
 			bindings = <
-			&none &none &GRAVE &none &none				&none &none &none &none &none 
+			&none &none &kp GRAVE &none &none			&none &none &none &none &none 
 			&kp TILDE &kp LBKT &kp RBKT &kp LBRC &kp RBRC    	&none &none &none &none &none
 			&none &none &none &none &none				&none &none &none &none &none
 							&none &none     	&none &none 
@@ -342,10 +342,10 @@
 		macro_layer {
 			label = "Macro.";
 			bindings = <
-			&kp ESCAPE &cad_hatch &cad_erase &cad_rotate &cad_trim	&none &none &none &none &none 
-			&cad_move &cad_pline &cad_dist &cad_fillet &cad_group	&none &none &none &none &none
-			&cad_join &cad_explode &cad_copy &cad_circle &cad_break	&none &none &none &none &none
-					  		&to SYM1 &mo MACRO2     &none &none 
+			&kp ESCAPE &cad_hatch &cad_erase &cad_rotate &cad_trim		&none &none &none &none &none 
+			&cad_move &cad_pline &cad_dist &cad_fillet &cad_group		&none &none &none &none &none
+			&cad_join &cad_explode &cad_copy &cad_circle &cad_break		&none &none &none &none &none
+					  		&to SYM1 &mo MACRO2     	&none &none 
 			>;
 		};
 
@@ -353,10 +353,10 @@
 		macro_2_layer {
 			label = "Macro.2";
 			bindings = <
-			&cad_offset &cad_mirror &cad_revc &cad_rect &cad_tori	&none &none &none &none &none 
-			&ca_array &cad_scale &cad_measure &cad_frz &cad_ugroup	&none &none &none &none &none
-			&cad_save &cad_match &cad_copyb &cad_paste &cad_ptbreak	&none &none &none &none &none
-					 	 		&none &none     &none &none 
+			&cad_offset &cad_mirror &cad_revc &cad_rect &cad_tori		&none &none &none &none &none 
+			&ca_array &cad_scale &cad_measure &cad_frz &cad_ugroup		&none &none &none &none &none
+			&cad_save &cad_match &cad_copyb &cad_paste &cad_ptbreak		&none &none &none &none &none
+					 	 		&none &none     	&none &none 
 			>;
 		};
 
@@ -364,10 +364,10 @@
 		settings_layer {
 				label = "Sett.";
 				bindings = <
-				&bootloader &none &none &bt BT_CLR &bt BT_SEL 0               &bt BT_SEL 3 &none &unstick &none &bootloader 
-				&none &none &none &none      &bt BT_SEL 1 			&bt BT_SEL 4 &none &none &none &none
-				&none &none &none &none      &bt BT_SEL 2               	&bt BT_SEL 5 &none &none &none &none
-								&none &none                         &none &none 
+				&bootloader &none &none &bt BT_CLR &bt BT_SEL 0		&bt BT_SEL 3 &none &unstick &none &bootloader 
+				&none &none &none &none      &bt BT_SEL 1 		&bt BT_SEL 4 &none &none &none &none
+				&none &none &none &none      &bt BT_SEL 2               &bt BT_SEL 5 &none &none &none &none
+								&none &none             &none &none 
 				>;
 		};
 	};
