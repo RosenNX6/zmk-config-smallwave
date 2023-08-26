@@ -179,6 +179,90 @@
 			bindings
 			= <&macro_tap &kp R &kp E &kp V &kp C &kp ENTER>;
 		};
+		cad_rect: cad_rect {
+			label = "CAD_rect";
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings
+			= <&macro_tap &kp R &kp E &kp C &kp T &kp ENTER>;
+		};
+		cad_tori: cad_tori {
+			label = "CAD_tori";
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings
+			= <&macro_tap &kp T &kp O &kp R &kp I &kp ENTER>;
+		};
+		cad_array: cad_array {
+			label = "CAD_array";
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings
+			= <&macro_tap &kp A &kp R &kp R &kp A &kp Y &kp ENTER>;
+		};
+		cad_scale: cad_scale {
+			label = "CAD_scale";
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings
+			= <&macro_tap &kp S &kp C &kp ENTER>;
+		};
+		cad_measure: cad_measure {
+			label = "CAD_measure";
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings
+			= <&macro_tap &kp M &kp E &kp A kp ENTER>;
+		};
+		cad_frz: cad_frz {
+			label = "CAD_frz";
+			compatible = "zmk,behavior-frz";
+			#binding-cells = <0>;
+			bindings
+			= <&macro_tap &kp F &kp R &kp Z &kp ENTER>;
+		};
+		cad_ugroup: cad_ugroup {
+			label = "CAD_ugroup";
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings
+			= <&macro_tap &kp U &kp N &kp G &kp ENTER>;
+		};
+		cad_save: cad_save {
+			label = "CAD_save";
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings
+			= <&macro_tap &kp S &kp ENTER>;
+		};
+		cad_match: cad_match {
+			label = "CAD_match";
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings
+			= <&macro_tap &kp M &kp A &kp ENTER>;
+		};
+		cad_copyb: cad_copyb {
+			label = "CAD_copyb";
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings
+			= <&macro_tap &kp C &kp O &kp P &kp Y &kp B &kp ENTER>;
+		};
+		cad_paste: cad_paste {
+			label = "CAD_paste";
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings
+			= <&macro_tap &kp P &kp A &kp S &kp T &kp ENTER>;
+		};
+		cad_ptbreak: cad_ptbreak {
+			label = "CAD_ptbreak";
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings
+			= <&macro_tap &kp B &kp R &kp E &kp A &kp K &kp A &kp T &kp P &kp O &kp I &kp N &kp T &kp ENTER>;
+		};
 	
 	};
 
@@ -265,9 +349,9 @@
 		macro_layer {
 			label = "Macro.";
 			bindings = <
-			&kp ESCAPE &kp HATCH &kp ERASE &kp ROTATE &kp TRIM	&none &none &none &none &none 
-			&kp MOVE &kp PLINE &kp DIST &kp FILLET &kp GROUP	&none &none &none &none &none
-			&kp JOIN &kp EXPLODE &kp COPY &kp CIRCLE &kp BREAK	&none &none &none &none &none
+			&kp ESCAPE &cad_hatch &cad_erase &cad_rotate &cad_trim	&none &none &none &none &none 
+			&cad_move &cad_pline &cad_dist &cad_fillet &cad_group	&none &none &none &none &none
+			&cad_join &cad_explode &cad_copy &cad_circle &cad_break	&none &none &none &none &none
 					  		&to SYM1 &mo MACRO2     &none &none 
 			>;
 		};
@@ -276,9 +360,9 @@
 		macro_2_layer {
 			label = "Macro.2";
 			bindings = <
-			&kp OFFSET &kp MIRROR &kp REVC &kp RECT &kp TORI	&none &none &none &none &none 
-			&kp ARRAY &kp SCALE &kp MEASURE &kp FRZ &kp UGROUP	&none &none &none &none &none
-			&kp SAVE &kp MATCH &kp COPYB &kp PASTE &kp PTBREAK	&none &none &none &none &none
+			&cad_offset &cad_mirror &cad_revc &cad_rect &cad_tori	&none &none &none &none &none 
+			&ca_array &cad_scale &cad_measure &cad_frz &cad_ugroup	&none &none &none &none &none
+			&cad_save &cad_match &cad_copyb &cad_paste &cad_ptbreak	&none &none &none &none &none
 					 	 		&none &none     &none &none 
 			>;
 		};
