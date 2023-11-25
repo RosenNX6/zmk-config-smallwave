@@ -6,10 +6,10 @@
 
 **Do you want to download my keymap?**
 
-> **Warning**
-> My firmware is still under construction...I am very confused.
+> **Just so you're aware...**
+> My firmware contains shortcuts intended to be used with AutoCAD. You can remove these shortcuts if you like by editing the code.
 
-[Cross your fingers and download the firmware zip from the latest successful action run.](https://github.com/RosenNX6/zmk-config-smallwave/actions)
+[Download the firmware zip from the latest successful action run.](https://github.com/RosenNX6/zmk-config-smallwave/actions)
 
 ## Keymap Cheat Sheet ##
 
